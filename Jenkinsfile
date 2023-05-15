@@ -18,5 +18,12 @@ pipeline {
                 sh './hello'
             }
         }
+
+         stage('Test') {
+            steps {
+                // Execute the compiled program
+                echo 'jasmine set up'
+            }
+        }
     }
 }
