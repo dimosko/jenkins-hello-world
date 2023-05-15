@@ -2,7 +2,7 @@
 int main()
 {
    // printf() displays the string inside quotation
-   printf("Hello, iiiSekai!\n");
+   printf("Hello, iis--iSekai!\n");
    // printf("Hello obs\n");
    printf("Hello jenkins\n");
    return 0;
