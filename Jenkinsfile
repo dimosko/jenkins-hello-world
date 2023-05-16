@@ -19,10 +19,12 @@ pipeline {
             }
         }
 
-         stage('Test') {
+         stage('build rdk') {
             steps {
-                // Execute the compiled program
-                echo 'jasmine set up'
+                // Execute the compiled programs
+                sh 'cd'
+                sh 'cd dr-yocto'
+                sh "docker run -it -v $PWD:/public/Work dr-yocto:18.04 bash -c 'cd rdk_aml-next-tv && source meta-obs-aml/setup-environment 18 && bitbake lib32-rdk-generic-hybrid-image'"
             }
         }
     }
